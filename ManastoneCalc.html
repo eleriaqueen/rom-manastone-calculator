@@ -1,94 +1,141 @@
 <!DOCTYPE html>
-<html>
-<script src="http://cdn.jquerytools.org/1.2.3/jquery.tools.min.js" type="text/javascript"></script>
-
+<html lang=en>
+<head>
+    <meta charset="UTF-8">
+    <title>Runes of Magic Manastone Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<form action="" name="formular">
-<table>
+<form class="w3-container" name="formular">
+<div class="w3-center">
 		<tbody>
 			<tr>
-				<td width="265">
+				<td>
 					Number of Mana Stones desired</td>
 				<td>
-					<input id="manaStoneCountInput" size="10" type="text"></td>
+					<input id="manaStoneCountInput" size="10" class="w3-input" type="text"></td>
 			</tr>
+			<div>
+				&nbsp;
+			</div>
 			<tr>
-				<td width="265">
+				<td>
 					Tier of the desired Mana Stones</td>
 				<td>
-					<input id="manaStoneTierInput" size="10" type="text"></td>
+					<input id="manaStoneTierInput" size="10" class="w3-input" type="text"></td>
 			</tr>
+			<div>
+				&nbsp;
+			</div>
 			<tr>
-				<td colspan="2" height="8">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td width="265">
+				<td>
 					Tier of the initial item¹</td>
 				<td>
-					<input id="itemTierInput" size="10" type="text" value="5"></td>
+					<input id="itemTierInput" size="10" class="w3-input" type="text" value="5"></td>
 			</tr>
+			<div>
+				&nbsp;
+			</div>
 			<tr>
-				<td width="265">
+				<td>
 					Costs of one initial item¹</td>
 				<td>
-					<input id="itemPriceInput" size="10" type="text" value="6124"></td>
+					<input id="itemPriceInput" size="10" class="w3-input" type="text" value="6124"></td>
 			</tr>
+			<div>
+				&nbsp;
+			</div>
 			<tr>
-				<td width="265">
+				<td>
 					Costs of one Fusion Stone²</td>
 				<td>
-					<input id="fusiPriceInput" size="10" type="text" value="1980"></td>
+					<input id="fusiPriceInput" size="10" class="w3-input" type="text" value="1980"></td>
 			</tr>
+						<div>
+				&nbsp;
+			</div>
 			<tr>
-				<td width="265">
+				<td>
 					Gold/Diamond Rate</td>
 				<td>
-					<input id="goldDiaRateInput" size="10" type="text" value="80000"></td>
+					<input id="goldDiaRateInput" size="10" class="w3-input" type="text" value="80000"></td>
 			</tr>
-			<tr>
-				<td colspan="2" height="8">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					Costs of the Arcane Charges</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input checked="checked" id="chargesPriceInput" name="crb" type="radio">&nbsp;10 Charges for 9 Diamonds</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input id="chargesPriceInput" name="crb" type="radio">&nbsp;50 Charges for 45 Diamonds</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input id="chargesPriceInput" name="crb" type="radio"> <input id="cpDiaCharges" size="3" type="text">&nbsp;Charges for&nbsp;<input id="cpDiaPrice" size="3" type="text"> Diamonds</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input id="chargesPriceInput" name="crb" type="radio">&nbsp;10 Charges for 100 Phirius Token Coins</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input id="chargesPriceInput" name="crb" type="radio">&nbsp;1 Charges for 30 Phirius Token Coins</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input id="chargesPriceInput" name="crb" type="radio"> <input id="cpPhiriusCharges" size="3" type="text">&nbsp;Charges for&nbsp;<input id="cpPhiriusPrice" size="3" type="text"> Phirius Token Coins</td>
-			</tr>
-			<tr>
-				<td colspan="2" height="8">
-					&nbsp;</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input id="wholePackageInput" type="checkbox">&nbsp;calculate Charges in complete packages³</td>
-			</tr>
-		</tbody>
-	</table>
+		</div>
+		<div class="w3-centered">
+			<div class="w3-row w3-section w3-center" id="title">
+					Costs of the Arcane Charges</div>
+			<div class="w3-row w3-section">
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input checked="checked" id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
+				<div class="w3-col l3 m3 s3 w3-center">
+					10 Charges for 9 Diamonds</div>
+
+
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
+				<div class="w3-col l3 m3 s3 w3-center">
+					50 Charges for 45 Diamonds</div>
+			</div>
+			<div>
+				&nbsp;
+			</div>
+			<div class="w3-row w3-section">
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input id="cpDiaCharges" size="3" class="w3-input" type="text"></div>
+
+				<div class="w3-col l2 m2 s2 w3-center">
+					Charges for</div>
+				<div class="w3-col l2 m2 s2 w3-center">		
+					<input id="cpDiaPrice" size="3" class="w3-input" type="text"></div>
+				<div class="w3-col l2 m2 s2 w3-center">Diamonds</div>
+			</div>
+			<div>
+				&nbsp;
+			</div>
+			<div class="w3-row w3-section">
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input checked="checked" id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
+				<div class="w3-col l3 m3 s3 w3-center">
+					10 Charges for 100 Phirius Token Coins</div>
+
+
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
+				<div class="w3-col l3 m3 s3 w3-center">
+					1 Charges for 30 Phirius Token Coins</div>
+			</div>
+			<div>
+				&nbsp;
+			</div>
+			<div class="w3-row w3-section">
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
+				<div class="w3-col l2 m2 s2 w3-center">
+					<input id="cpPhiriusCharges" size="3" class="w3-input" type="text"></div>
+
+				<div class="w3-col l2 m2 s2 w3-center">
+					Charges for</div>
+				<div class="w3-col l2 m2 s2 w3-center">		
+					<input id="cpPhiriusPrice" size="3" class="w3-input" type="text"></div>
+				<div class="w3-col l2 m2 s2 w3-center">Phirius Token Coins</div>
+			</div>
+			<div>
+				&nbsp;
+			</div>
+			<div class="w3-row w3-section">
+				<div class="w3-col l5 m5 s5 w3-center">
+					<input id="wholePackageInput" type="checkbox">
+				</div>
+				<div class="w3-col l5 m5 s5 w3-center">
+					calculate Charges in complete packages³
+				</div>
+			</div>
+	</div>
 	<p align="center">
 		<input onclick="updateValues()" type="button" value="calculate"></p>
 </form>
@@ -101,203 +148,7 @@
 	<span style="font-size: 12px;">¹ Tier and price of "Recall Belt" (cloth) of NPC "Cholman Hooktail" (Sarlo) or NPC "Didide Spiderfoot" (Wailing Fjord)</span><br>
 	<span style="font-size: 12px;">² Price of a <a href="http://www.runesdatabase.com/item/202999/" style="font-size: 10px;">Random Fusion Stone</a></span><br>
 	<span style="font-size: 12px;">³ The number of Charges is rounded up to the package size. That means if 126 Charges are required, the price will be calculated for 150 Charges.</span></p>
-<script type="text/javascript">
-
-function getNumberString(v) {
-	var s = (Math.ceil(v)).toString();
-	var fs = "";
-
-	if (s.length > 3) {
-		for (var i = 0; i < s.length; i++) {
-			fs += s.substring(i, i + 1);
-
-			if ((i + 1) % 3 == (s.length % 3) && (i + 1) < s.length) {
-				fs += ".";
-			}
-		}
-	} else {
-		return s;
-	}
-
-	return fs;
-}
-
-function plural(v,p) {
-  return ((Math.ceil(v) == 1) ? "" : p);
-}
-
-function singularPlural(v,s,p) {
-  return ((Math.ceil(v) == 1) ? s : p);
-}
-
-function updateValues() {
-	var manaStoneCount = parseInt(document.getElementById("manaStoneCountInput").value);
-	var manaStoneTier = parseInt(document.getElementById("manaStoneTierInput").value);
-
-	var itemTier = parseInt(document.getElementById("itemTierInput").value);
-	var itemPrice = parseInt(document.getElementById("itemPriceInput").value);
-	var fusiPrice = parseInt(document.getElementById("fusiPriceInput").value);
-	var goldDiaRate = parseInt(document.getElementById("goldDiaRateInput").value);
-
-	var wholePackage = document.getElementById("wholePackageInput").checked;
-
-	var chargesPriceType = 0;
-	for (var i = 0; i < 6; i++) {
-		if (document.formular.chargesPriceInput[i].checked) chargesPriceType = i;
-	}
-
-	var chargesPrice = 0;
-	var payWithDiamonds = true;
-
-	var cpCharges = 0;
-	var cpPrice = 0;
-
-	switch (chargesPriceType) {
-	case 0:
-		cpCharges = 10;
-		cpPrice = 9;
-		break;
-	case 1:
-		cpCharges = 50;
-		cpPrice = 45;
-		break;
-	case 2:
-		cpCharges = parseInt(document.getElementById("cpDiaCharges").value);
-		cpPrice = parseInt(document.getElementById("cpDiaPrice").value);
-		break;
-	case 3:
-		cpCharges = 10;
-		cpPrice = 100;
-		payWithDiamonds = false;
-		break;
-	case 4:
-		cpCharges = 1;
-		cpPrice = 30;
-		payWithDiamonds = false;
-		break;
-	case 5:
-		cpCharges = parseInt(document.getElementById("cpPhiriusCharges").value);
-		cpPrice = parseInt(document.getElementById("cpPhiriusPrice").value);
-		payWithDiamonds = false;
-	}
-
-	chargesPrice = cpPrice / cpCharges;
-
-	var s = "";
-	var error = false;
-
-	if (isNaN(manaStoneCount) || manaStoneCount <= 0) {
-		s += "Error: The number of desired Mana Stones must be greater than 0.<br />";
-		error = true;
-	}
-	if (isNaN(manaStoneTier) || manaStoneTier <= 0 || manaStoneTier < itemTier) {
-		s += "Error: The tier of the desired Mana Stones must be greater than 0 and must not be smaller than the tier of the initial item.<br />";
-		error = true;
-	}
-	if (isNaN(itemTier) || itemTier <= 0) {
-		s += "Error: The tier of the initial item must be greater than 0.<br />";
-		error = true;
-	}
-	if (isNaN(itemPrice) || itemPrice < 0) {
-		s += "Error: The price of the initial item must not be smaller than 0.<br />";
-		error = true;
-	}
-	if (isNaN(fusiPrice) || fusiPrice < 0) {
-		s += "Error: he price of a Fusion Stone must not be smaller than 0.<br />";
-		error = true;
-	}
-	if (isNaN(goldDiaRate) || goldDiaRate <= 0) {
-		s += "Error: The Gold/Diamond rate must be greater than 0.<br />";
-		error = true;
-	}
-	if (isNaN(cpCharges) || cpCharges <= 0 || isNaN(cpPrice) || cpPrice < 0) {
-		s += "Error: The price for an Arcane Charge must be greater than 0.<br />";
-		error = true;
-	}
-
-	if (!error) {
-		var itemCount = manaStoneCount * Math.pow(3, manaStoneTier - itemTier);
-		
-		var chargesCount = 0;
-		for (var i = 0; i <= (manaStoneTier - itemTier); i++) {
-			chargesCount += Math.pow(3, i);
-		}
-		chargesCount *= manaStoneCount;
-
-		if (wholePackage) {
-			var chargesUsed = chargesCount;
-			var packageCount = Math.ceil(chargesCount / cpCharges);
-			chargesCount = Math.ceil(chargesCount / cpCharges) * cpCharges;
-			var chargesLeft = chargesCount - chargesUsed;
-		}
-
-		var finalChargesPrice = chargesCount * chargesPrice;
-		var finalItemPrice = itemCount * itemPrice;
-		var finalFusiPrice = itemCount * fusiPrice;
-
-		s += "<b>Required Materials:</b><br />";
-		s += getNumberString(itemCount) + " item" + plural(itemCount,"s") + " of tier " + itemTier + "<br />";
-		s += getNumberString(itemCount) + " Fusion Stone" + plural(itemCount,"s") + "<br />";
-
-		if (!wholePackage) {
-			s += getNumberString(chargesCount) + " Arcane Charge" + plural(chargesCount,"s") + "<br />";
-		} else {
-			//s += "<br /><b>Required Charges:</b><br />";
-			s += getNumberString(packageCount) + " package" + plural(packageCount,"s");
-			s += " with each " + getNumberString(cpCharges) + " Arcane Charge" + plural(cpCharges,"s");
-			s += " (" + getNumberString(chargesUsed) + " Charge" + plural(chargesUsed,"s") + " will be used, ";
-			s += getNumberString(chargesLeft) + " " + singularPlural(chargesLeft,"Charge is","Charges are") + " remaining)<br />";
-		}
-
-		s += "<br /><b>Total Costs:</b><br />";
-
-		if (payWithDiamonds) {
-			var finalPriceGold = finalChargesPrice * goldDiaRate + finalItemPrice + finalFusiPrice;
-			var finalPriceDia = finalPriceGold / goldDiaRate;
-			s += getNumberString(finalPriceGold) + " Gold or ";
-			s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + "<br />";
-		} else {
-			var finalPriceGold = finalItemPrice + finalFusiPrice;
-			var finalPriceDia = finalPriceGold / goldDiaRate;
-			s += getNumberString(finalPriceGold) + " Gold and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + " or<br />";
-			s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + " and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
-		}
-
-		s += "<br /><b>Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
-		s += (wholePackage ? (" respectively " + packageCount + " package" + plural(packageCount,"s")) : "") + "</b><br />";
-		
-		if (payWithDiamonds) {
-			s += getNumberString(finalChargesPrice * goldDiaRate) + " Gold or " + getNumberString(finalChargesPrice) + " Diamond" + plural(finalChargesPrice,"s") + "<br />";
-		} else {
-			s += getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
-		}
-
-		s += "<br /><b>Costs for " + getNumberString(itemCount) + " item" + plural(itemCount,"s") + ":</b><br />";
-		s += getNumberString(finalItemPrice) + " Gold or " + getNumberString(finalItemPrice / goldDiaRate) + " Diamond" + plural(finalItemPrice / goldDiaRate,"s") + "<br />";
-
-		s += "<br /><b>Costs for " + getNumberString(itemCount) + " Fusion Stones:</b><br />";
-		s += getNumberString(finalFusiPrice) + " Gold or " + getNumberString(finalFusiPrice / goldDiaRate) + " Diamond" + plural(finalFusiPrice / goldDiaRate,"s") + "<br />";
-	}
-
-	document.getElementById("results").innerHTML = s;
-}
-</script>
-
-<script type="text/javascript">
-$(function() {
-	$('a.articlepagelinks').click(function() {
-		var delimiter = '&';
-		
-		var link = $(this).attr('href');
-		if (link.indexOf('?') == -1) delimiter = '?';
-		
-		var pagelink = $(this).attr('href') + delimiter + 'ajax=true';
-		$('#articlepagecontent').load(pagelink);
-		return false;
-	});
-})
-</script>
-
+<script src="ManastoneCalc.js" type="text/javascript"></script>
 </body>
 </html>
 

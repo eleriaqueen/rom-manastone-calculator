@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'roboto';
+  src: url('font/roboto-bold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('font/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/roboto-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/roboto-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('font/roboto-bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('font/roboto-bold-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body {
+  background: rgb(20,20,20);
+  font-family: "Roboto", Fallback, sans-serif;
+  font-size: 14px;
+  color: white;
+}
+
+#title {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div {
+  max-width: 480px;
+  margin: auto;
+}
