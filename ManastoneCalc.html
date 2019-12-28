@@ -11,76 +11,50 @@
 
 <form class="w3-container" name="formular">
 <div class="w3-center">
-			<div>
-				<div>
+			<div class="w3-row w3-section w3-center" id="title">
 					Number of Mana Stones desired</div>
-				<div>
+			<div class="w3-row w3-section">
+			<div>
 					<input id="manaStoneCountInput" class="w3-input" type="text"></div>
 			</div>
-			<div>
-				&nbsp;
-			</div>
-			<div>
-				<div>
+
+			<div class="w3-row w3-section w3-center" id="title">
 					Tier of the desired Mana Stones</div>
-				<div>
+			<div>
 					<input id="manaStoneTierInput" class="w3-input" type="text"></div>
 			</div>
-			<div>
-				&nbsp;
-			</div>
-			<div>
-				<div>
+
+			<div class="w3-row w3-section w3-center" id="title">
 					Tier of the initial item¹</div>
-				<div>
+			<div>
 					<input id="itemTierInput" class="w3-input" type="text" value="5"></div>
 			</div>
+			<div class="w3-row w3-section w3-center" id="title">
+					Cost of one initial item¹</div>
 			<div>
-				&nbsp;
-			</div>
-			<div>
-				<div>
-					Costs of one initial item¹</div>
-				<div>
-					<input id="itemPriceInput" class="w3-input" type="text" value="6124"></div>
+				<input id="itemPriceInput" class="w3-input" type="text" value="6124"></div>
 			</div>
 			<div>
 				&nbsp;
 			</div>
+			<div class="w3-row w3-section w3-center" id="title">
+					Cost of one Fusion Stone²</div>
 			<div>
-				<div>
-					Costs of one Fusion Stone²</div>
 				<div>
 					<input id="fusiPriceInput" class="w3-input" type="text" value="1980"></div>
 			</div>
-			<div>
-				&nbsp;
-			</div>
-			<div>
-				<div>
+			<div class="w3-row w3-section w3-center" id="title">
 					Gold/Diamond Rate</div>
-				<div>
+			<div>
 					<input id="goldDiaRateInput" class="w3-input" type="text" value="80000"></div>
 			</div>
 		</div>
+		<div>
+			&nbsp;
+		</div>
 		<div class="w3-centered">
 			<div class="w3-row w3-section w3-center" id="title">
-					Costs of the Arcane Charges</div>
-			<div class="w3-row w3-section">
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input checked="checked" id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
-				<div class="w3-col l3 m3 s3 w3-center">
-					10 Charges for 9 Diamonds</div>
-
-
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
-				<div class="w3-col l3 m3 s3 w3-center">
-					50 Charges for 45 Diamonds</div>
-			</div>
-			<div>
-				&nbsp;
-			</div>
+					Currency used to acquire the Arcane Charges</div>
 			<div class="w3-row w3-section">
 				<div class="w3-col l2 m2 s2 w3-center">
 					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
@@ -96,21 +70,8 @@
 			<div>
 				&nbsp;
 			</div>
-			<div class="w3-row w3-section">
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input checked="checked" id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
-				<div class="w3-col l3 m3 s3 w3-center">
-					10 Charges for 100 Phirius Token Coins</div>
 
 
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
-				<div class="w3-col l3 m3 s3 w3-center">
-					1 Charges for 30 Phirius Token Coins</div>
-			</div>
-			<div>
-				&nbsp;
-			</div>
 			<div class="w3-row w3-section">
 				<div class="w3-col l2 m2 s2 w3-center">
 					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
@@ -141,9 +102,9 @@
 	<p align="center">
 		<input onclick="updateValues()" type="button" value="calculate"></p>
 </form>
-<div id="results">
+<div id="results" class="w3-center" text-size="14px">
 	&nbsp;</div>
-<p>
+<p class="w3-center">
 	<br>
 	<br>
 	<br>

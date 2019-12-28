@@ -37,7 +37,7 @@ function updateValues() {
 	var wholePackage = document.getElementById("wholePackageInput").checked;
 
 	var chargesPriceType = 0;
-	for (var i = 0; i < 6; i++) {
+	for (var i = 0; i < 2; i++) {
 		if (document.formular.chargesPriceInput[i].checked) chargesPriceType = i;
 	}
 
@@ -49,28 +49,10 @@ function updateValues() {
 
 	switch (chargesPriceType) {
 	case 0:
-		cpCharges = 10;
-		cpPrice = 9;
-		break;
-	case 1:
-		cpCharges = 50;
-		cpPrice = 45;
-		break;
-	case 2:
 		cpCharges = parseInt(document.getElementById("cpDiaCharges").value);
 		cpPrice = parseInt(document.getElementById("cpDiaPrice").value);
 		break;
-	case 3:
-		cpCharges = 10;
-		cpPrice = 100;
-		payWithDiamonds = false;
-		break;
-	case 4:
-		cpCharges = 1;
-		cpPrice = 30;
-		payWithDiamonds = false;
-		break;
-	case 5:
+	case 1:
 		cpCharges = parseInt(document.getElementById("cpPhiriusCharges").value);
 		cpPrice = parseInt(document.getElementById("cpPhiriusPrice").value);
 		payWithDiamonds = false;
@@ -139,7 +121,7 @@ function updateValues() {
 		} else {
 			//s += "<br /><b>Required Charges:</b><br />";
 			s += getNumberString(packageCount) + " package" + plural(packageCount,"s");
-			s += " with each " + getNumberString(cpCharges) + " Arcane Charge" + plural(cpCharges,"s");
+			s += " containing " + getNumberString(cpCharges) + " Arcane Charge" + plural(cpCharges,"s");
 			s += " (" + getNumberString(chargesUsed) + " Charge" + plural(chargesUsed,"s") + " will be used, ";
 			s += getNumberString(chargesLeft) + " " + singularPlural(chargesLeft,"Charge is","Charges are") + " remaining)<br />";
 		}
