@@ -24,6 +24,7 @@ input {
 	max-width: 240px;
 	margin: auto;
 	text-align: center;
+
 }
 
 .title {
@@ -38,4 +39,8 @@ input {
 
 .border-orange {
 	border-color: orange!important;
+}
+
+.vertical-center {
+	margin: auto;
 }
