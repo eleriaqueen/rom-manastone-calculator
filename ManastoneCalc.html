@@ -10,99 +10,109 @@
 <body>
 
 <form class="w3-container" name="formular">
-<div class="w3-center">
-			<div class="w3-row w3-section w3-center" id="title">
-					Number of Mana Stones desired</div>
-			<div class="w3-row w3-section">
-			<div>
-					<input id="manaStoneCountInput" class="w3-input" autofocus type="text"></div>
-			</div>
-
-			<div class="w3-row w3-section w3-center" id="title">
-					Tier of the desired Mana Stones</div>
-			<div>
-					<input id="manaStoneTierInput" class="w3-input" type="text"></div>
-			</div>
-
-			<div class="w3-row w3-section w3-center" id="title">
-					Tier of the initial item¹</div>
-			<div>
-					<input id="itemTierInput" class="w3-input" type="text" value="5"></div>
-			</div>
-			<div class="w3-row w3-section w3-center" id="title">
-					Cost of one initial item¹</div>
-			<div>
-				<input id="itemPriceInput" class="w3-input" type="text" value="6124"></div>
-			</div>
-			<div>
-				&nbsp;
-			</div>
-			<div class="w3-row w3-section w3-center" id="title">
-					Cost of one Fusion Stone²</div>
-			<div>
-				<div>
-					<input id="fusiPriceInput" class="w3-input" type="text" value="1980"></div>
-			</div>
-			<div class="w3-row w3-section w3-center" id="title">
-					Gold/Diamond Rate</div>
-			<div>
-					<input id="goldDiaRateInput" class="w3-input" type="text" value="80000"></div>
-			</div>
+	<div class="w3-center w3-border border-orange">
+		<div class="w3-row w3-section w3-center title">
+			Number of Mana Stones desired
 		</div>
-		<div>
-			&nbsp;
+		<div class="w3-row w3-section w3-center">
+			<input id="manaStoneCountInput" class="w3-input" autofocus type="text">
 		</div>
-		<div class="w3-centered">
-			<div class="w3-row w3-section w3-center" id="title">
-					Currency used to acquire the Arcane Charges</div>
-			<div class="w3-row w3-section">
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"></div>
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input id="cpDiaCharges" size="3" class="w3-input" type="text"></div>
-
-				<div class="w3-col l2 m2 s2 w3-center">
-					Charges for</div>
-				<div class="w3-col l2 m2 s2 w3-center">		
-					<input id="cpDiaPrice" size="3" class="w3-input" type="text"></div>
-				<div class="w3-col l2 m2 s2 w3-center">Diamonds</div>
-			</div>
-			<div>
-				&nbsp;
-			</div>
-
-
-			<div class="w3-row w3-section">
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio" checked></div>
-				<div class="w3-col l2 m2 s2 w3-center">
-					<input id="cpPhiriusCharges" size="3" class="w3-input" type="text"></div>
-
-				<div class="w3-col l2 m2 s2 w3-center">
-					Charges for</div>
-				<div class="w3-col l2 m2 s2 w3-center">		
-					<input id="cpPhiriusPrice" size="3" class="w3-input" type="text"></div>
-				<div class="w3-col l2 m2 s2 w3-center">Phirius Token Coins</div>
-			</div>
-			<div>
-				&nbsp;
-			</div>
-			<div class="w3-row w3-section">
-				<div class="w3-col l5 m5 s5 w3-center">
-					<input id="wholePackageInput" type="checkbox">
-				</div>
-				<div class="w3-col l5 m5 s5 w3-center">
-					calculate Charges in complete packages³
-				</div>
-			</div>
+		<div class="w3-row w3-section w3-center title">
+			Tier of the desired Mana Stones
+		</div>
+		<div class="w3-row w3-section w3-center">
+			<input id="manaStoneTierInput" class="w3-input" type="text">
+		</div>
+		<div class="w3-row w3-section w3-center title">
+			Tier of the initial item¹
+		</div>
+		<div class="w3-row w3-section w3-center">
+			<input id="itemTierInput" class="w3-input" type="text" value="5">
+		</div>
+		<div class="w3-row w3-section w3-center title">
+			Cost of one initial item¹
+		</div>
+		<div class="w3-row w3-section w3-center title">
+			<input id="itemPriceInput" class="w3-input" type="text" value="6124">
+		</div>
+		<div class="w3-row w3-section w3-center title">
+			Cost of one Fusion Stone²
+		</div>
+		<div class="w3-row w3-section w3-center title">
+			<input id="fusiPriceInput" class="w3-input" type="text" value="1980">
+		</div>
+		<div class="w3-row w3-section w3-center title">
+			Gold/Diamond Rate
+		</div>
+		<div class="w3-row w3-section w3-center title">
+			<input id="goldDiaRateInput" class="w3-input" type="text" value="80000">
+		</div>
 	</div>
+	<div>
+		&nbsp;
+	</div>
+	<div class="w3-center w3-border border-orange">
+		<div class="w3-row w3-section w3-center title">
+			Currency used to acquire the Arcane Charges
+		</div>
+		<div class="w3-row w3-section w3-center">
+			<div class="w3-col l2 m2 s2 w3-center">
+				<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio">
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">
+				<input id="cpDiaCharges" size="3" class="w3-input" type="text">
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">
+				Charges for
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">		
+				<input id="cpDiaPrice" size="3" class="w3-input" type="text">
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">
+				Diamonds
+			</div>
+		</div>
+
+		<div class="w3-row w3-section w3-center">
+			<div class="w3-col l2 m2 s2 w3-center">
+				<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio" checked>
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">
+				<input id="cpPhiriusCharges" size="3" class="w3-input" type="text">
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">
+				Charges for
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">		
+				<input id="cpPhiriusPrice" size="3" class="w3-input" type="text">
+			</div>
+			<div class="w3-col l2 m2 s2 w3-center">
+				Phirius Token Coins
+			</div>
+		</div>
+		<div class="w3-row w3-section w3-center">
+			<div class="w3-col l5 m5 s5 w3-center">
+				<input id="wholePackageInput" type="checkbox">
+			</div>
+			<div class="w3-col l5 m5 s5 w3-center">
+				calculate Charges in complete packages³
+			</div>
+		</div>
+	</div>
+</form>
+
+
+		
+			
+
+
 	<div>
 		&nbsp;
 	</div>
 	<p align="center">
 		<input onclick="updateValues()" type="button" value="Calculate"></p>
 </form>
-<div id="results" class="w3-center" text-size="14px">
+<div id="results" class="w3-center w3-border border-orange" text-size="14px">
 	&nbsp;</div>
 <p class="w3-center">
 	<br>

@@ -26,8 +26,12 @@ input {
 	text-align: center;
 }
 
-#title {
+.title {
 	font-size: 15px;
 	font-weight: bold;
 	color: orange;
+}
+
+.border-orange {
+	border-color: orange!important;
 }
