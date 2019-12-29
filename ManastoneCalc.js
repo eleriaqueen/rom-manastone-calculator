@@ -112,7 +112,7 @@ function updateValues() {
 		var finalItemPrice = itemCount * itemPrice;
 		var finalFusiPrice = itemCount * fusiPrice;
 
-		s += "<b style=\"color: orange\">Required Materials:</b><br />";
+		s += "<div class=\"w3-row w3-section\"><b style=\"color: orange\">Required Materials:</b><br />";
 		s += getNumberString(itemCount) + " item" + plural(itemCount,"s") + " of tier " + itemTier + "<br />";
 		s += getNumberString(itemCount) + " Fusion Stone" + plural(itemCount,"s") + "<br />";
 
@@ -123,7 +123,7 @@ function updateValues() {
 			s += getNumberString(packageCount) + " package" + plural(packageCount,"s");
 			s += " containing " + getNumberString(cpCharges) + " Arcane Charge" + plural(cpCharges,"s");
 			s += " (" + getNumberString(chargesUsed) + " Charge" + plural(chargesUsed,"s") + " will be used, ";
-			s += getNumberString(chargesLeft) + " " + singularPlural(chargesLeft,"Charge is","Charges are") + " remaining)<br />";
+			s += getNumberString(chargesLeft) + " " + singularPlural(chargesLeft,"Charge is","Charges are") + " remaining)<br /></div>";
 		}
 
 		s += "<br /><b style=\"color: orange\">Total Costs:</b><br />";
