@@ -112,7 +112,7 @@ function updateValues() {
 		var finalItemPrice = itemCount * itemPrice;
 		var finalFusiPrice = itemCount * fusiPrice;
 
-		s += "<b>Required Materials:</b><br />";
+		s += "<b style=\"color: orange\">Required Materials:</b><br />";
 		s += getNumberString(itemCount) + " item" + plural(itemCount,"s") + " of tier " + itemTier + "<br />";
 		s += getNumberString(itemCount) + " Fusion Stone" + plural(itemCount,"s") + "<br />";
 
@@ -126,7 +126,7 @@ function updateValues() {
 			s += getNumberString(chargesLeft) + " " + singularPlural(chargesLeft,"Charge is","Charges are") + " remaining)<br />";
 		}
 
-		s += "<br /><b>Total Costs:</b><br />";
+		s += "<br /><b style=\"color: orange\">Total Costs:</b><br />";
 
 		if (payWithDiamonds) {
 			var finalPriceGold = finalChargesPrice * goldDiaRate + finalItemPrice + finalFusiPrice;
@@ -140,7 +140,7 @@ function updateValues() {
 			s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + " and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
 		}
 
-		s += "<br /><b>Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
+		s += "<br /><b style=\"color: orange\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
 		s += (wholePackage ? (" respectively " + packageCount + " package" + plural(packageCount,"s")) : "") + "</b><br />";
 		
 		if (payWithDiamonds) {
@@ -149,14 +149,15 @@ function updateValues() {
 			s += getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
 		}
 
-		s += "<br /><b>Costs for " + getNumberString(itemCount) + " item" + plural(itemCount,"s") + ":</b><br />";
+		s += "<br /><b style=\"color: orange\">Costs for " + getNumberString(itemCount) + " item" + plural(itemCount,"s") + ":</b><br />";
 		s += getNumberString(finalItemPrice) + " Gold or " + getNumberString(finalItemPrice / goldDiaRate) + " Diamond" + plural(finalItemPrice / goldDiaRate,"s") + "<br />";
 
-		s += "<br /><b>Costs for " + getNumberString(itemCount) + " Fusion Stones:</b><br />";
+		s += "<br /><b style=\"color: orange\">Costs for " + getNumberString(itemCount) + " Fusion Stones:</b><br />";
 		s += getNumberString(finalFusiPrice) + " Gold or " + getNumberString(finalFusiPrice / goldDiaRate) + " Diamond" + plural(finalFusiPrice / goldDiaRate,"s") + "<br />";
 	}
 
 	document.getElementById("results").innerHTML = s;
+	document.getElementById("results").style = "display:block";
 }
 
 
