@@ -18,33 +18,33 @@ body {
 div {
   max-width: 512px;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
 }
 
-div#main {
+#main, #arcane-charge {
 	padding-top: 2px;
 	padding-bottom: 4px;
 }
 
-div#arcane-charge {
+#arcane-charge {
 	padding-top: 2px;
 	padding-bottom: 4px;
 }
 
-div#charge-diamond, #charge-phirius {
+#charge-diamond, #charge-phirius {
 	padding-left: 14px;
 }
 
-div#charge-calc {
+#charge-calc {
 	padding-left: 20px;
 }
 
-div#calc {
+#calc {
 	padding-top: 22px;
 	padding-bottom: 22px;	
 }
 
-div#results {
+#results {
 	padding-top: 22px;
 	padding-bottom: 22px;	
 }
@@ -55,7 +55,7 @@ input {
 	text-align: center;
 }
 
-input#calc-button {
+#calc-button {
 	 max-width:160px!important;
 }
 
