@@ -16,31 +16,72 @@ body {
 }
 
 div {
-  max-width: 480px;
-  margin: auto;
+  max-width: 512px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+div#main {
+	padding-top: 2px;
+	padding-bottom: 4px;
+}
+
+div#arcane-charge {
+	padding-top: 2px;
+	padding-bottom: 4px;
+}
+
+div#charge-diamond, #charge-phirius {
+	padding-left: 14px;
+}
+
+div#charge-calc {
+	padding-left: 20px;
+}
+
+div#calc {
+	padding-top: 22px;
+	padding-bottom: 22px;	
+}
+
+div#results {
+	padding-top: 22px;
+	padding-bottom: 22px;	
 }
 
 input {
-	max-width: 240px;
+	max-width: 180px;
 	margin: auto;
 	text-align: center;
+}
 
+input#calc-button {
+	 max-width:160px!important;
 }
 
 .title {
 	font-size: 15px;
 	font-weight: bold;
-	color: orange;
+	color: rgb(200,150,0);
 }
 
-.jsorigin {
-	color: orange;
+.border-rounded-medium {
+	border-radius: 8px;
+	border-color: rgb(200,150,0)!important;
 }
 
-.border-orange {
-	border-color: orange!important;
+.border-rounded-small {
+	border-radius: 5px;
 }
 
 .vertical-center {
 	margin: auto;
+}
+
+.my-dark-grey {
+	background-color: rgb(27,27,27);
+}
+
+.my-dark-gold {
+	color: rgb(200,150,0)!important;
 }

@@ -112,7 +112,7 @@ function updateValues() {
 		var finalItemPrice = itemCount * itemPrice;
 		var finalFusiPrice = itemCount * fusiPrice;
 
-		s += "<div class=\"w3-row w3-section\"><b style=\"color: orange\">Required Materials:</b><br />";
+		s += "<b class=\"my-dark-gold\">Required Materials:</b><br />";
 		s += getNumberString(itemCount) + " item" + plural(itemCount,"s") + " of tier " + itemTier + "<br />";
 		s += getNumberString(itemCount) + " Fusion Stone" + plural(itemCount,"s") + "<br />";
 
@@ -122,11 +122,11 @@ function updateValues() {
 			//s += "<br /><b>Required Charges:</b><br />";
 			s += getNumberString(packageCount) + " package" + plural(packageCount,"s");
 			s += " containing " + getNumberString(cpCharges) + " Arcane Charge" + plural(cpCharges,"s");
-			s += " (" + getNumberString(chargesUsed) + " Charge" + plural(chargesUsed,"s") + " will be used, ";
-			s += getNumberString(chargesLeft) + " " + singularPlural(chargesLeft,"Charge is","Charges are") + " remaining)<br /></div>";
+			s += "<br />(" + getNumberString(chargesUsed) + " Charge" + plural(chargesUsed,"s") + " will be used, ";
+			s += getNumberString(chargesLeft) + " " + singularPlural(chargesLeft,"Charge is","Charges are") + " remaining)<br />";
 		}
 
-		s += "<br /><b style=\"color: orange\">Total Costs:</b><br />";
+		s += "<br /><b class=\"my-dark-gold\">Total Costs:</b><br />";
 
 		if (payWithDiamonds) {
 			var finalPriceGold = finalChargesPrice * goldDiaRate + finalItemPrice + finalFusiPrice;
@@ -140,8 +140,8 @@ function updateValues() {
 			s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + " and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
 		}
 
-		s += "<br /><b style=\"color: orange\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
-		s += (wholePackage ? (" respectively " + packageCount + " package" + plural(packageCount,"s")) : "") + "</b><br />";
+		s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
+		s += (wholePackage ? (" (" + packageCount + " package" + plural(packageCount,"s")) : "") + ")</b><br />";
 		
 		if (payWithDiamonds) {
 			s += getNumberString(finalChargesPrice * goldDiaRate) + " Gold or " + getNumberString(finalChargesPrice) + " Diamond" + plural(finalChargesPrice,"s") + "<br />";
@@ -149,10 +149,10 @@ function updateValues() {
 			s += getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
 		}
 
-		s += "<br /><b style=\"color: orange\">Costs for " + getNumberString(itemCount) + " item" + plural(itemCount,"s") + ":</b><br />";
+		s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(itemCount) + " item" + plural(itemCount,"s") + ":</b><br />";
 		s += getNumberString(finalItemPrice) + " Gold or " + getNumberString(finalItemPrice / goldDiaRate) + " Diamond" + plural(finalItemPrice / goldDiaRate,"s") + "<br />";
 
-		s += "<br /><b style=\"color: orange\">Costs for " + getNumberString(itemCount) + " Fusion Stones:</b><br />";
+		s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(itemCount) + " Fusion Stones:</b><br />";
 		s += getNumberString(finalFusiPrice) + " Gold or " + getNumberString(finalFusiPrice / goldDiaRate) + " Diamond" + plural(finalFusiPrice / goldDiaRate,"s") + "<br />";
 	}
 
