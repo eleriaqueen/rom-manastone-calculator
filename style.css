@@ -9,7 +9,7 @@
 }
 
 body {
-  background: rgb(20,20,20);
+  background: rgb(15,15,15);
   font-family: "Roboto", Fallback, sans-serif;
   font-size: 14px;
   color: white;
@@ -62,12 +62,12 @@ input {
 .title {
 	font-size: 15px;
 	font-weight: bold;
-	color: rgb(200,150,0);
+	color: rgb(240,175,0);
 }
 
 .border-rounded-medium {
 	border-radius: 8px;
-	border-color: rgb(200,150,0)!important;
+	border-color: rgb(240,175,0)!important;
 }
 
 .border-rounded-small {
@@ -75,9 +75,9 @@ input {
 }
 
 .my-dark-grey {
-	background-color: rgb(27,27,27);
+	background-color: rgb(20,20,20);
 }
 
 .my-dark-gold {
-	color: rgb(200,150,0)!important;
+	color: rgb(240,175,0)!important;
 }
