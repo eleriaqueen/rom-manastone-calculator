@@ -56,7 +56,7 @@ input {
 }
 
 #calc-button {
-	 max-width:160px!important;
+	 max-width:160px;
 }
 
 .title {
