@@ -1,3 +1,26 @@
+:root {
+	--body-bg: white;
+	--body-color: black;
+
+	--font-size: 16px;
+	--txt-align: center;
+
+	--content-width: 576px;
+	--min-body-width: 600px;
+
+	--input-width: 160px;
+	--button-height: 32px;
+
+	--color-txt-highlight: rgb(120,88,0);
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-bg: black;
+		--body-color: white;
+		--color-txt-highlight: rgb(240,175,0);
+	}
+}
+
 @font-face {
   font-family: 'roboto';
   src: url('font/roboto-bold-webfont.eot'); /* IE9 Compat Modes */
@@ -9,75 +32,36 @@
 }
 
 body {
-  background: rgb(15,15,15);
   font-family: "Roboto", Fallback, sans-serif;
-  font-size: 14px;
-  color: white;
-}
-
-div {
-  max-width: 512px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#main, #arcane-charge {
-	padding-top: 2px;
-	padding-bottom: 4px;
-}
-
-#arcane-charge {
-	padding-top: 2px;
-	padding-bottom: 4px;
-}
-
-#charge-diamond, #charge-phirius {
-	padding-left: 14px;
-}
-
-#charge-calc {
-	padding-left: 20px;
-}
-
-#calc {
-	padding-top: 22px;
-	padding-bottom: 22px;	
-}
-
-#results {
-	padding-top: 22px;
-	padding-bottom: 22px;	
+  font-size: var(--font-size);
+  background-color: var(--body-bg);
+  color: var(--body-color);
+  min-width: var(--min-body-width);
 }
 
 input {
-	max-width: 180px;
-	margin: auto;
-	text-align: center;
+  max-width: var(--input-width);
+  border-radius: 6px;
+  text-align: var(--txt-align);
 }
 
 #calc-button {
-	 max-width:160px;
-}
-
-.title {
-	font-size: 15px;
-	font-weight: bold;
-	color: rgb(240,175,0);
-}
-
-.border-rounded-medium {
-	border-radius: 8px;
-	border-color: rgb(240,175,0)!important;
-}
-
-.border-rounded-small {
-	border-radius: 5px;
-}
-
-.my-dark-grey {
-	background-color: rgb(20,20,20);
+	 max-width: var(--input-width);
+	 height: var(--button-height);
 }
 
 .my-dark-gold {
-	color: rgb(240,175,0)!important;
+	color: var(--color-txt-highlight);
+}
+
+.my-txt-center {
+	text-align: var(--txt-align);
+}
+
+.my-center {
+	margin:auto;
+}
+
+.maxwidth-512 {
+	max-width: var(--content-width);
 }

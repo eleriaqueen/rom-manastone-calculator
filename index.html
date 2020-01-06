@@ -4,101 +4,111 @@
     <meta charset="UTF-8">
     <title>Runes of Magic Manastone Calculator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="w3.css">
+
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<form class="w3-section" name="formular">
-	<div class="w3-section w3-card-4 my-dark-grey w3-center w3-border border-rounded-medium" id="main">
-		<div class="w3-section title">
+<div class="my-center my-txt-center maxwidth-512 my-dark-gold">
+	<div class="" id="main">
+
 			Number of Mana Stones desired
+
+		<div class="">
+			<input id="manaStoneCountInput" class="" autofocus type="number" min="1">
 		</div>
-		<div class="w3-section">
-			<input id="manaStoneCountInput" class="w3-input border-rounded-small" autofocus type="number" min="1">
-		</div>
-		<div class="w3-section title">
+
 			Tier of the desired Mana Stones
+
+		<div class="">
+			<input id="manaStoneTierInput" class="" type="number" min="1">
 		</div>
-		<div class="w3-section">
-			<input id="manaStoneTierInput" class="w3-input border-rounded-small" type="number" min="1">
-		</div>
-		<div class="w3-section title">
+
 			Tier of the initial item¹
+
+		<div class="">
+			<input id="itemTierInput" class="" type="number" value="5" min="1">
 		</div>
-		<div class="w3-section">
-			<input id="itemTierInput" class="w3-input border-rounded-small" type="number" value="5" min="1">
-		</div>
-		<div class="w3-section title">
+
 			Cost of one initial item¹
+
+		<div class="">
+			<input id="itemPriceInput" class="" type="number" value="6124" min="1">
 		</div>
-		<div class="w3-section title">
-			<input id="itemPriceInput" class="w3-input border-rounded-small" type="number" value="6124" min="1">
-		</div>
-		<div class="w3-section title">
+
 			Cost of one Fusion Stone²
+
+		<div class="">
+			<input id="fusiPriceInput" class="" type="number" value="1980" min="1">
 		</div>
-		<div class="w3-section title">
-			<input id="fusiPriceInput" class="w3-input border-rounded-small" type="number" value="1980" min="1">
-		</div>
-		<div class="w3-section title">
+
 			Gold/Diamond Rate
-		</div>
-		<div class="w3-section title">
-			<input id="goldDiaRateInput" class="w3-input border-rounded-small" type="number" value="80000" min="1">
+
+		<div class="">
+			<input id="goldDiaRateInput" class="" type="number" value="80000" min="1">
 		</div>
 	</div>
-
-	<div class="w3-section w3-card-4 my-dark-grey w3-border border-rounded-medium" id="arcane-charge">
-		<div class="w3-section title w3-center">
+</div>
+	<div>
+		&nbsp;
+	</div>
+	<div class="my-center maxwidth-512">
+	<div class="" id="arcane-charge">
+		<div class="my-txt-center my-dark-gold">
 			Currency used to acquire the Arcane Charges
 		</div>
-		<div class="w3-section w3" id="charge-diamond">
-			<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio"  style="width:6%;display:inline;">
-			<input id="cpDiaCharges" size="3" class="w3-input border-rounded-small" type="number" min="1"  style="width:24%;display:inline;">
+		<div class="" id="charge-diamond" style="margin-bottom:5px;">
+			<input id="chargesPriceInput" name="crb" class="" type="radio"  style="width:6%;display:inline;">
+			<input id="cpDiaCharges" size="3" class="" type="number" min="1"  style="width:24%;display:inline;">
 			<p style="width:22%;display:inline;">
 				Charges for
 			</p>
-			<input id="cpDiaPrice" size="3" class="w3-input border-rounded-small" type="number" min="1"  style="width:24%;display:inline;">
+			<input id="cpDiaPrice" size="3" class="" type="number" min="1"  style="width:24%;display:inline;">
 			<p style="width:24%;display:inline;">
 				Diamonds
 			</p>
 		</div>
+		</div>
 
-		<div class="w3-section" id="charge-phirius">
-				<input id="chargesPriceInput" name="crb" class="w3-radio" type="radio" checked style="width:6%;display:inline;">
-				<input id="cpPhiriusCharges" size="3" class="w3-input border-rounded-small" type="number" min="1" style="width:24%;display:inline;">
+
+		<div id="charge-phirius" style="margin-bottom:5px;">
+				<input id="chargesPriceInput" name="crb" class="" type="radio" checked style="width:6%;display:inline;">
+				<input id="cpPhiriusCharges" size="3" class="" type="number" min="1" style="width:24%;display:inline;">
 				<p style="width:22%;display:inline;">
 					Charges for
 				</p>
-				<input id="cpPhiriusPrice" size="3" class="w3-input border-rounded-small" type="number" min="1" style="width:24%;display:inline;">
+				<input id="cpPhiriusPrice" size="3" class="" type="number" min="1" style="width:24%;display:inline;">
 				<p style="width:24%;display:inline;">
 					Phirius Token Coins
 				</p>
 		</div>
-		<div class="w3-section w3-center" id="charge-calc">
-			<div class="">
-				<input id="wholePackageInput" type="checkbox">
-				&nbsp Calculate Charges in complete packages³
-			</div>
+	</div>
+	<div id="charge-calc" style="text-align:center;">
+		<div class="">
+			<input id="wholePackageInput" type="checkbox">
+			&nbsp Calculate Charges in complete packages³
 		</div>
 	</div>
-<div class="w3-card-4 my-dark-grey w3-section w3-center w3-border border-rounded-medium" id="calc">
-	<input class="w3-input border-rounded-small" id="calc-button" onclick="updateValues()" type="button" value="Calculate">
+
+	<div>
+		&nbsp;
+	</div>
+<div class="my-center my-txt-center maxwidth-512" id="calc">
+	<input id="calc-button" onclick="updateValues()" type="button" value="Calculate">
+</div>
+</div>
+<div class="" id="results" text-size="14px" style="display:none">
 </div>
 
-<div class="w3-card-4 my-dark-grey w3-section w3-center w3-border border-rounded-medium" id="results" text-size="14px" style="display:none">
-</div>
-
-<p class="w3-center">
+<p class="my-txt-center">
 	<br>
 	<br>
 	<br>
 	<span style="font-size: 12px;">¹ Tier and price of "Recall Belt" (cloth) of NPC "Cholman Hooktail" (Sarlo) or NPC "Didide Spiderfoot" (Wailing Fjord)</span><br>
-	<span style="font-size: 12px;">² Price of a <a href="http://www.runesdatabase.com/item/202999/" style="font-size: 10px;">Random Fusion Stone</a></span><br>
+	<span style="font-size: 12px;">² Price of a "Random Fusion Stone"</span><br>
 	<span style="font-size: 12px;">³ The number of Charges is rounded up to the package size. That means if 126 Charges are required, the price will be calculated for 150 Charges.</span><br>
-	<span class="my-dark-gold" style="font-size: 12px;">Javascript code on this page is a slightly modified version of <a href="http://www.rom-welten.de/en/articles,id581,0,mana_stone_calculator.html">Manastone Calculator (RoM-Welten)</a> </span></p>
-	
+	<span class="my-dark-gold" style="font-size: 12px;">Javascript code on this page is a slightly modified version of <a href="http://www.rom-welten.de/en/articles,id581,0,mana_stone_calculator.html">Manastone Calculator (RoM-Welten)</a> </span>
+</p>
 	
 <script src="script.js" type="text/javascript"></script>
 </body>
