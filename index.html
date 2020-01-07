@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="my-center my-txt-center maxwidth-512 my-dark-gold" name="formular">
+<div class="my-center my-txt-center maxwidth-512 my-dark-gold">
 	<div class="" id="main">
 
 			Number of Mana Stones desired
@@ -52,7 +52,7 @@
 	<div>
 		&nbsp;
 	</div>
-	<div class="my-center maxwidth-512">
+	<form class="my-center maxwidth-512" name="formular">
 	<div class="" id="arcane-charge">
 		<div class="my-txt-center my-dark-gold">
 			Currency used to acquire the Arcane Charges
@@ -82,8 +82,8 @@
 					Phirius Token Coins
 				</p>
 		</div>
-	</div>
-	<div id="charge-calc" style="text-align:center;">
+	</form>
+	<div class="my-txt-center" id="charge-calc">
 		<div class="">
 			<input id="wholePackageInput" type="checkbox">
 			&nbsp Calculate Charges in complete packages³
@@ -97,7 +97,7 @@
 	<input id="calc-button" onclick="updateValues()" type="button" value="Calculate">
 </div>
 </div>
-<div class="" id="results" text-size="14px" style="display:none">
+<div class="my-txt-center" id="results" text-size="14px" style="display:none">
 </div>
 
 <p class="my-txt-center">
