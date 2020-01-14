@@ -17,9 +17,12 @@ body {
 }
 
 input {
+  font-family: "Roboto", Fallback, sans-serif;
+  font-size: 16px;
   max-width: 576px;
   border-radius: 6px;
   text-align: center;
+  min-height: 20px;
 }
 
 #calc-button {
