@@ -21,6 +21,13 @@ div {
   margin-right: auto;
 }
 
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
 #main, #arcane-charge {
 	padding-top: 2px;
 	padding-bottom: 4px;
@@ -68,6 +75,8 @@ input {
 	font-size: 14px;
 	font-weight: bold;
 	color: rgb(240,175,0);
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .border-rounded-medium {
