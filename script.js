@@ -87,10 +87,10 @@ function updateValues() {
 		s += "Error: Gold/Diamond rate must be greater than 0.<br />";
 		error = true;
 	}
-	if (isNaN(cpCharges) || cpCharges <= 0 || isNaN(cpPrice) || cpPrice < 0) {
-		s += "Error: Price for an Arcane Charge must be greater than 0.<br />";
-		error = true;
-	}
+	// if (isNaN(cpCharges) || cpCharges <= 0 || isNaN(cpPrice) || cpPrice < 0) {
+	//	s += "Error: Price for an Arcane Charge must be greater than 0.<br />";
+	//	error = true;
+	// }
 
 	if (!error) {
 		var itemCount = manaStoneCount * Math.pow(3, manaStoneTier - itemTier);
@@ -127,27 +127,40 @@ function updateValues() {
 		}
 
 		s += "<br /><b class=\"my-dark-gold\">Total Costs:</b><br />";
-
-		if (payWithDiamonds) {
-			var finalPriceGold = finalChargesPrice * goldDiaRate + finalItemPrice + finalFusiPrice;
-			var finalPriceDia = finalPriceGold / goldDiaRate;
-			s += getNumberString(finalPriceGold) + " Gold or ";
-			s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + "<br />";
-		} else {
+		
+		if (isNaN(cpCharges) || isNaN(cpPrice))
+		{
 			var finalPriceGold = finalItemPrice + finalFusiPrice;
 			var finalPriceDia = finalPriceGold / goldDiaRate;
-			s += getNumberString(finalPriceGold) + " Gold and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + " or<br />";
-			s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + " and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
+			s += getNumberString(finalPriceGold) + " Gold or<br />";
+			s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + "<br />";
 		}
-
-		s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
-		s += (wholePackage ? (" (" + packageCount + " package" + plural(packageCount,"s")) : "") + ")</b><br />";
+		else
+		{
+			if (payWithDiamonds) {
+				var finalPriceGold = finalChargesPrice * goldDiaRate + finalItemPrice + finalFusiPrice;
+				var finalPriceDia = finalPriceGold / goldDiaRate;
+				s += getNumberString(finalPriceGold) + " Gold or ";
+				s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + "<br />";
+			} else {
+				var finalPriceGold = finalItemPrice + finalFusiPrice;
+				var finalPriceDia = finalPriceGold / goldDiaRate;
+				s += getNumberString(finalPriceGold) + " Gold and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + " or<br />";
+				s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + " and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
+			}
+			
+			s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
+			s += (wholePackage ? (" (" + packageCount + " package" + plural(packageCount,"s")) : "") + "</b><br />";
 		
-		if (payWithDiamonds) {
-			s += getNumberString(finalChargesPrice * goldDiaRate) + " Gold or " + getNumberString(finalChargesPrice) + " Diamond" + plural(finalChargesPrice,"s") + "<br />";
-		} else {
-			s += getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
+			if (payWithDiamonds) {
+				s += getNumberString(finalChargesPrice * goldDiaRate) + " Gold or " + getNumberString(finalChargesPrice) + " Diamond" + plural(finalChargesPrice,"s") + "<br />";
+			} else {
+				s += getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
+			}
 		}
+		
+
+
 
 		s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(itemCount) + " item" + plural(itemCount,"s") + ":</b><br />";
 		s += getNumberString(finalItemPrice) + " Gold or " + getNumberString(finalItemPrice / goldDiaRate) + " Diamond" + plural(finalItemPrice / goldDiaRate,"s") + "<br />";
