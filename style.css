@@ -11,7 +11,7 @@
 body {
   background: rgb(15,15,15);
   font-family: "Roboto", Fallback, sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   color: white;
 }
 
@@ -60,7 +60,7 @@ input {
 }
 
 .title {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: bold;
 	color: rgb(240,175,0);
 }
