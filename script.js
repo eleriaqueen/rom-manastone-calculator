@@ -64,31 +64,31 @@ function updateValues() {
 	var error = false;
 
 	if (isNaN(manaStoneCount) || manaStoneCount <= 0) {
-		s += "Error: The number of desired Mana Stones must be greater than 0.<br />";
+		s += "Error: Number of desired Mana Stones must be greater than 0.<br />";
 		error = true;
 	}
 	if (isNaN(manaStoneTier) || manaStoneTier <= 0 || manaStoneTier < itemTier) {
-		s += "Error: The tier of the desired Mana Stones must be greater than 0 and must not be smaller than the tier of the initial item.<br />";
+		s += "Error: Tier of the desired Mana Stones must be greater than 0 and must not be smaller than tier of the initial item.<br />";
 		error = true;
 	}
 	if (isNaN(itemTier) || itemTier <= 0) {
-		s += "Error: The tier of the initial item must be greater than 0.<br />";
+		s += "Error: Tier of the initial item must be greater than 0.<br />";
 		error = true;
 	}
 	if (isNaN(itemPrice) || itemPrice < 0) {
-		s += "Error: The price of the initial item must not be smaller than 0.<br />";
+		s += "Error: Price of the initial item must not be smaller than 0.<br />";
 		error = true;
 	}
 	if (isNaN(fusiPrice) || fusiPrice < 0) {
-		s += "Error: he price of a Fusion Stone must not be smaller than 0.<br />";
+		s += "Error: Price of a Fusion Stone must not be smaller than 0.<br />";
 		error = true;
 	}
 	if (isNaN(goldDiaRate) || goldDiaRate <= 0) {
-		s += "Error: The Gold/Diamond rate must be greater than 0.<br />";
+		s += "Error: Gold/Diamond rate must be greater than 0.<br />";
 		error = true;
 	}
 	if (isNaN(cpCharges) || cpCharges <= 0 || isNaN(cpPrice) || cpPrice < 0) {
-		s += "Error: The price for an Arcane Charge must be greater than 0.<br />";
+		s += "Error: Price for an Arcane Charge must be greater than 0.<br />";
 		error = true;
 	}
 
