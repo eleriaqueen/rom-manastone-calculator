@@ -59,6 +59,11 @@ input {
 	 max-width:160px;
 }
 
+.w3-section {
+	margin-top: 12px!important;
+	margin-bottom: 12px!important;
+}
+
 .title {
 	font-size: 14px;
 	font-weight: bold;
