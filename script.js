@@ -186,7 +186,7 @@ function updateValues() {
 				}
 			
 				s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
-				s += (wholePackage ? (" (" + packageCount + " package" + plural(packageCount,"s")) : "") + "</b><br />";
+				s += (wholePackage ? (" (" + packageCount + " package" + plural(packageCount,"s") + ")") : "") + "</b><br />";
 		
 				if (payWithDiamonds) {
 					s += getNumberString(finalChargesPrice * goldDiaRate) + " Gold or " + getNumberString(finalChargesPrice) + " Diamond" + plural(finalChargesPrice,"s") + "<br />";
