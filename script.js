@@ -103,9 +103,10 @@ function updateValues() {
 
 		if (wholePackage) {
 			var chargesUsed = chargesCount;
-			var packageCount = Math.ceil(chargesCount / cpCharges);
-			if (!isNaN(cpPrice))
+			if (!(isNaN(cpPrice) || isNaN(chargesCount)))
 			{
+				var packageCount = Math.ceil(chargesCount / cpCharges);
+
 				chargesCount = Math.ceil(chargesCount / cpCharges) * cpCharges;
 			}
 			var chargesLeft = chargesCount - chargesUsed;
@@ -123,7 +124,10 @@ function updateValues() {
 		if (!(isNaN(fusiPrice) || fusiPrice < 0)) {
 			
 			s += getNumberString(chargesCount) + " Arcane Charge" + plural(chargesCount,"s") + "<br />";
-
+			if (chargesLeft)
+			{
+				s += "(" + getNumberString(chargesLeft) + " unused Charges)<br />"
+			}
 			
 			if (isNaN(cpCharges) || isNaN(cpPrice))
 			{
@@ -145,8 +149,9 @@ function updateValues() {
 					var finalPriceDia = finalPriceGold / goldDiaRate;
 					s += getNumberString(finalPriceGold) + " Gold and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + " or<br />";
 					s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + " and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
+
 				}
-			
+
 				s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
 				s += (wholePackage ? (" (" + packageCount + " package" + plural(packageCount,"s") + ")") : "") + "</b><br />";
 		
@@ -161,7 +166,10 @@ function updateValues() {
 		{
 
 			s += getNumberString(chargesCount) + " Arcane Charge" + plural(chargesCount,"s") + "<br />";
-			
+			if (chargesLeft)
+			{
+				s += "(" + getNumberString(chargesLeft) + " unused Charges)<br />"
+			}
 			if (isNaN(cpCharges) || isNaN(cpPrice))
 			{
 				var finalPriceGold = finalItemPrice;
@@ -184,7 +192,7 @@ function updateValues() {
 					s += getNumberString(finalPriceGold) + " Gold and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + " or<br />";
 					s += getNumberString(finalPriceDia) + " Diamond" + plural(finalPriceDia,"s") + " and " + getNumberString(finalChargesPrice) + " Phirius Token Coin" + plural(finalChargesPrice,"s") + "<br />";
 				}
-			
+				
 				s += "<br /><b class=\"my-dark-gold\">Costs for " + getNumberString(chargesCount) + " Charge" + plural(chargesCount,"s");
 				s += (wholePackage ? (" (" + packageCount + " package" + plural(packageCount,"s") + ")") : "") + "</b><br />";
 		
